@@ -1,0 +1,495 @@
+{
+	"info": {
+		"_postman_id": "2413f572-a5c7-41bf-93f6-f26c9de83bd4",
+		"name": "Library System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45053735"
+	},
+	"item": [
+		{
+			"name": "Auth RQ",
+			"item": [
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"hasna\",\n    \"password\": \"A016461a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"ismail\",\n    \"email\": \"aboutazizur@gmail.com\",\n    \"password\": \"A016461a\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/register/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"register",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Books & Metadata RQ",
+			"item": [
+				{
+					"name": "Admin",
+					"item": [
+						{
+							"name": "Admin Add A Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk0OTkzLCJpYXQiOjE3NDc1OTQ2OTMsImp0aSI6Ijk1MGVkZjRjODdlMjQwOTliZDI1ZGQyZWIyODEyNzNmIiwidXNlcl9pZCI6MX0.ae07apbYHAmPPK2R6J37Un1cZY_4Mv4CsIbN7FW2-kA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Postman Learning\",\n    \"description\": \"How to use postman for api testing\",\n    \"total_copies\": 10,\n    \"available_copies\": 10,\n    \"author_id\": 1,\n    \"category_id\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/books/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Add A New Author",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk2NjkzLCJpYXQiOjE3NDc1OTYzOTMsImp0aSI6ImJmYzVjZDY5NjFhYTRkZDE4ZjRjNWY5M2QxZTY2OTdmIiwidXNlcl9pZCI6MX0.1rN3Cb8Ac6q1CrLJzV-MrhVh3mWam8ogoizpfdRvWNM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Azizur Rahaman\",\n    \"bio\": \"A compepitive Programmer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/authors/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"authors",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Add A New Category",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk2NjkzLCJpYXQiOjE3NDc1OTYzOTMsImp0aSI6ImJmYzVjZDY5NjFhYTRkZDE4ZjRjNWY5M2QxZTY2OTdmIiwidXNlcl9pZCI6MX0.1rN3Cb8Ac6q1CrLJzV-MrhVh3mWam8ogoizpfdRvWNM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Fighting\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/categories/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"categories",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Delete a Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk3MDUzLCJpYXQiOjE3NDc1OTY3NTMsImp0aSI6ImUyM2ViZTM0NTk3ZjRiYjA4Yjk0NzFlMjgzMGFhMTkzIiwidXNlcl9pZCI6MX0.DaDWOjrpwbVRpPFRCG_PVc8YNjPY0Sj_ljRTL3HSvGk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/books/2/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books",
+										"2",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Admin Edit A Book",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk4MTU1LCJpYXQiOjE3NDc1OTc4NTUsImp0aSI6ImZiNzBjYWJhN2RkYTQxOGJiMTM4YWMwYzk1YzBkNWQ2IiwidXNlcl9pZCI6MX0.iWciAX2CxdwNosRJjaJPBrQ_quZPhoDbpk80Y7dzkmM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\": \"War with won\",\n  \"description\": \"Updated description here\",\n  \"total_copies\": 12,\n  \"available_copies\": 4,\n  \"author_id\": 3,\n  \"category_id\": 3\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/books/3/",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"books",
+										"3",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User Return A Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk1ODQ5LCJpYXQiOjE3NDc1OTU1NDksImp0aSI6IjUxYmI3Yjk1Yjc3YTQ5MGNiNTMwNzAxOTdkZTljZDhlIiwidXNlcl9pZCI6NX0.pn2QLgmGb8qAKTcBW4KR3H_sZioiA7sD4u5MHgoRllI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"borrow_id\": 9\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/return/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"return",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Penaltie Pointes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk2MzQ0LCJpYXQiOjE3NDc1OTYwNDQsImp0aSI6ImExZDNlYzlhZTZkZDRkMTQ4Y2I1ZDEyMjIwNTFjODhlIiwidXNlcl9pZCI6NX0.pFhIhk2Nv0QBoYAXGlPR1dm7fWkhC9pf_cHbCHepZyM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/users/5/penalties/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"users",
+								"5",
+								"penalties",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Of All Books",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk1NDMwLCJpYXQiOjE3NDc1OTUxMzAsImp0aSI6ImM1OGMwYWYyOTFiZDQ1OTJiYzQwZjk0MDcwMWY2N2ZlIiwidXNlcl9pZCI6NX0.vg4ywP1JxSOGBC7qhqmkXkqG5QPJGmaWCTkeElsQuE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/books/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"books",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Borrowing & Others RQ",
+			"item": [
+				{
+					"name": "User Borrow Book",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk1NDMwLCJpYXQiOjE3NDc1OTUxMzAsImp0aSI6ImM1OGMwYWYyOTFiZDQ1OTJiYzQwZjk0MDcwMWY2N2ZlIiwidXNlcl9pZCI6NX0.vg4ywP1JxSOGBC7qhqmkXkqG5QPJGmaWCTkeElsQuE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"book_id\": 4\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/borrow/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"borrow",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Borrows List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3NTk1NDMwLCJpYXQiOjE3NDc1OTUxMzAsImp0aSI6ImM1OGMwYWYyOTFiZDQ1OTJiYzQwZjk0MDcwMWY2N2ZlIiwidXNlcl9pZCI6NX0.vg4ywP1JxSOGBC7qhqmkXkqG5QPJGmaWCTkeElsQuE8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/borrow/list/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"borrow",
+								"list",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
