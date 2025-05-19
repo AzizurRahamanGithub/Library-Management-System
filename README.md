@@ -10,7 +10,7 @@ This is a Django REST Framework-based API for managing a library system, which s
 [Download Postman Collection](./library_system_api.postman_collection.json)
 
 ###  ER Diagram
-[Click here to view the ER Diagram (PDF)](./ER_diagram.pdf)
+[Click here to view the ER Diagram (PDF)](./ER_diagram_of_library_system.pdf)
 
 ---
 
@@ -23,6 +23,15 @@ This is a Django REST Framework-based API for managing a library system, which s
 - Admin permissions for modifying data
 
 ---
+
+
+##  Assumptions & Limitations
+
+- Only authenticated users can borrow/return books.
+- Admin users can perform full CRUD on books, authors, and categories.
+- The penalty calculation is basic and does not cap or forgive old penalties.
+- No frontend is provided — this is a backend API-only project.
+
 
 ---
 
