@@ -83,13 +83,6 @@ git clone https://github.com/AzizurRahamanGithub/Library-Management-System.git
 cd Library-Management-System
 ```
 
-### Clone the repository
-
-```bash
-python -m venv env
-source env/bin/activate   # This is for Linux
-```
-
 ### Create and activate virtual environment
 ```bash
 python -m venv env
