@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Environment
+.env
+*.env
+*.venv/
+venv/
+ENV/
+env.bak/
+env/
+
+# Django/Migrations
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.DS_Store
+migrations/**/__pycache__/
+**/migrations/*.pyc
+**/migrations/*.pyo
+**/migrations/*.pyd
+**/migrations/*.db
+**/migrations/__pycache__/
+**/migrations/0001_initial.py
+**/migrations/000*/  # optional if you recreate migrations
+
+# Static & Media
+/staticfiles/
+/media/
+
+# IDEs & Editors
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Postman (optional)
+*.postman_collection.json
+
+# Compiled files
+*.egg-info/
+*.egg
+dist/
+build/
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.cache/
